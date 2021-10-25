@@ -34,6 +34,9 @@ mongoose.connect("mongodb+srv://Vaishaali18:18vaishaali@cluster0.luix3.mongodb.n
       console.log("MongoDB database connection established successfully");
     })
 //setup routes
+app.get('/',(req,res) => {
+  res.send("Backend")
+})
 app.post('/sendpdf',function(req,res){
   let { email, dirpath ,name} = req.body;
   var sender = nodemailer.createTransport({
