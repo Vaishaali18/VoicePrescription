@@ -16,7 +16,7 @@ app.use(cors());
 
 //mongoose connection
 
-mongoose.connect(process.env.ATLAS_URI,
+mongoose.connect("mongodb+srv://Vaishaali18:18vaishaali@cluster0.luix3.mongodb.net/voiceprescription?retryWrites=true&w=majority",
     {
         useCreateIndex: true,
         useUnifiedTopology: true,
