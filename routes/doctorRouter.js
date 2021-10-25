@@ -94,6 +94,13 @@ router.get("/view",async(req,res)=>{
         res.status(500).send(error);
     })
 });
+router.get("/",async(req,res)=>{
+    doctor.find({}).then((doctors) => {
+        res.send(doctors);
+    }).catch((error) => {
+        res.status(500).send(error);
+    })
+});
 
 router.get("/viewCardio",async(req,res)=>{
     doctor.find({specialization :"Cardiologist"}).then((doctors) => {
